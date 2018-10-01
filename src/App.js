@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
 import Carol from './component/Carausel';
+import { Button } from 'reactstrap';
+import Order from './component/BookingRoom'
 import './App.css'
 import './css/animate.css'
 import './css/bootstrap.min.css'
@@ -35,9 +37,16 @@ import logo from './img/core-img/logo.png'
 
 
 class App extends Component{
+    constructor(props){
+        super(props);
+        this.state = {
+            showModule: ''
+        };
+        //debugger // eslint-disable-line 
+        this.showCreate = this.showCreate.bind(this);
+        this.closeModal = this.closeModal.bind(this);
+    }
   render(){
-
-    const newbg6 = `url(${bg6})`
     return(
     <div>
 
@@ -137,19 +146,19 @@ class App extends Component{
                         <div className="col-12 col-md-4">
                             <div className="single-top-features d-flex align-items-center justify-content-center">
                                 <i className="icon-agenda-1"></i>
-                                <h5>Online Courses</h5>
+                                <h5>Hotdesk or Flexidesk</h5>
                             </div>
                         </div>
                         <div className="col-12 col-md-4">
                             <div className="single-top-features d-flex align-items-center justify-content-center">
                                 <i className="icon-assistance"></i>
-                                <h5>Amazing Teachers</h5>
+                                <h5>Event Space</h5>
                             </div>
                         </div>
                         <div className="col-12 col-md-4">
                             <div className="single-top-features d-flex align-items-center justify-content-center">
-                                <i className="icon-telephone-3"></i>
-                                <h5>Great Support</h5>
+                            <i class="icon-id-card"></i>
+                                <h5>Startup & IT Hub</h5>
                             </div>
                         </div>
                     </div>
@@ -298,11 +307,10 @@ class App extends Component{
             </div>
         </div>
         <div className="row">
+        
             <div className="col-12 col-md-6">
                 <div className="single-testimonial-area mb-100 d-flex wow fadeInUp" data-wow-delay="400ms">
-                    <div class="testimonial-thumb">
-                    <img src={event3} alt="event"/>
-                    </div>
+                
                     <div className="testimonial-content">
                         <h5>Business Management Series</h5>
                         <p>From digital marketing to modern organization management, our space provide you with 
@@ -312,31 +320,17 @@ class App extends Component{
             </div>
             <div className="col-12 col-md-6">
                 <div className="single-testimonial-area mb-100 d-flex wow fadeInUp" data-wow-delay="500ms">
-                    <div style={{marginRight: '20px'}}>
-                        <img  src={event1} alt="event1"/>
-                    </div>
+                   
                     <div className="testimonial-content">
                         <h5>Social Series</h5>
                         <p>Cooking, brunch or healthy lifestyle seminar to balance your daily life.</p>
                     </div>
                 </div>
             </div>
-            <div className="col-12 col-md-6">
-                <div className="single-testimonial-area mb-100 d-flex wow fadeInUp" data-wow-delay="500ms">
-                    <div style={{marginRight: '20px'}}>
-                        <img src={event1} alt="event1"/>
-                    </div>
-                    <div className="testimonial-content">
-                        <h5>Social Series</h5>
-                        <p>Cooking, brunch or healthy lifestyle seminar to balance your daily life.</p>
-                    </div>
-                </div>
-            </div>
+           
             <div className="col-12 col-md-6">
                 <div className="single-testimonial-area mb-100 d-flex wow fadeInUp" data-wow-delay="600ms">
-                    <div style={{marginRight: '20px'}}>
-                        <img src={event3} alt="event3"/>
-                    </div>
+                    
                     <div className="testimonial-content">
                         <h5>Tech Series</h5>
                         <p>Product Review, Startups tips or coding workshops, we got it covered for you.</p>
@@ -373,7 +367,7 @@ class App extends Component{
                                     <li> Weekly / Monthly : <strong>Rp 400,000 / Rp 1,250,000 </strong> </li>
                                 </ul>
                             </div>
-                            <button onclick="document.getElementById('id02').style.display='block'"  class="btn academy-btn btn-sm" type="submit">Order now</button>
+                            <Button onClick={this.showCreate} className="btn academy-btn btn-sm">Order now</Button>
                         </div>
                         <div class="popular-course-thumb bg-img" style={{backgroundImage: `url(${bg3})`}}></div>
                     </div>
@@ -390,7 +384,7 @@ class App extends Component{
                                     <li> Monthly : <strong> Rp 2,750,000</strong></li>
                                 </ul>
                             </div>
-                            <button onclick="document.getElementById('id02').style.display='block'"  class="btn academy-btn btn-sm" type="submit">Order now</button>
+                            <Button onClick={this.showCreate} className="btn academy-btn btn-sm">Order now</Button>
                         </div>
                         <div class="popular-course-thumb bg-img" style={{backgroundImage: `url(${bg5})`}}></div>
                     </div>
@@ -408,10 +402,9 @@ class App extends Component{
                                    <li>Monthly start from : <strong>Rp 1,850,000</strong> </li>
                                </ul>
                            </div>
-                           <button onclick="document.getElementById('id02').style.display='block'"  class="btn academy-btn btn-sm" type="submit">Order now</button>
+                           <Button onClick={this.showCreate} className="btn academy-btn btn-sm">Order now</Button>
                         </div>
                         <div class="popular-course-thumb bg-img" style={{backgroundImage: `url(${bg6})`}}></div>
-                        {/* <img src={bg6}/> */}
                     </div>
                 </div>
                 
@@ -426,7 +419,7 @@ class App extends Component{
                                     <li> Start from :<strong> Rp 800,000</strong> </li>
                                 </ul>
                             </div>
-                            <button onclick="document.getElementById('id02').style.display='block'"  class="btn academy-btn btn-sm" type="submit">Order now</button>
+                            <Button onClick={this.showCreate} className="btn academy-btn btn-sm">Order now</Button>
                         </div>
                         <div class="popular-course-thumb bg-img" style={{backgroundImage: `url(${bg2})`}}></div>
                     </div>
@@ -444,7 +437,7 @@ class App extends Component{
                                     <li>Monthly start from :<strong>Rp 3,000,000</strong> </li>
                                 </ul>
                             </div>
-                            <button onclick="document.getElementById('id02').style.display='block'"  class="btn academy-btn btn-sm" type="submit">Order now</button>
+                            <Button onClick={this.showCreate} className="btn academy-btn btn-sm">Order now</Button>
                         </div>
                         <div class="popular-course-thumb bg-img" style={{backgroundImage: `url(${bg1})`}}></div>
                     </div>
@@ -465,7 +458,7 @@ class App extends Component{
                                        <strong>Groupies : Rp 30,000/pax, minimal 3 pax!</strong>  
                                 </ul>
                             </div>
-                            <button onclick="document.getElementById('id02').style.display='block'"  class="btn academy-btn btn-sm" type="submit">Order now</button>
+                            <Button onClick={this.showCreate} className="btn academy-btn btn-sm">Order now</Button>
                         </div>
                         <div class="popular-course-thumb bg-img" style={{backgroundImage: `url(${img1})`}}></div>
                     </div>
@@ -554,8 +547,21 @@ class App extends Component{
         </div>
     </div>
     </div>
+    { (this.state.showModule == 'create') && <Order modal={this.state.modal} closeModal={this.closeModal}/> }
     </div>
         )
+    }
+    showCreate(){
+        this.setState({
+            showModule: 'create',
+            modal: true
+        });
+    }
+     closeModal() {
+        this.setState({
+            showModule: '',
+            modal: false
+        });
     }
 }
 export default App;
