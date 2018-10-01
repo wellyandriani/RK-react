@@ -36,8 +36,6 @@ import logo from './img/core-img/logo.png'
 
 class App extends Component{
   render(){
-
-    const newbg6 = `url(${bg6})`
     return(
     <div>
 
@@ -100,20 +98,20 @@ class App extends Component{
                                 <div className="cross-wrap"><span className="top"></span><span className="bottom"></span></div>
                             </div>
 
-                            <div className="classynav">
+                            <div>
                                 <ul>
-                                    <li><a href="#">Pricing</a> </li>
-                                    <li><a href="#">Facilities</a> </li>
-                                    <li><a href="#">About Us</a></li>
-                                    <li><a href="#">Event</a></li>
-                                    <li><a href="#">Contact</a></li>
+                                    <li ><a>Pricing</a> </li>
+                                    <li><a>Facilities</a> </li>
+                                    <li><a>About Us</a></li>
+                                    <li><a>Event</a></li>
+                                    <li><a>Contact</a></li>
                                 </ul>
                             </div>
                         </div>
 
                         <div className="calling-info">
                             <div className="call-center">
-                                <a href="#"> <span>Login/Member</span></a>
+                                <a> <span>Login/Member</span></a>
                             </div>
                         </div>
                     </nav>
@@ -287,7 +285,7 @@ class App extends Component{
         </div>
     </div>
     </div>
-    <div className="testimonials-area section-padding-100 bg-img bg-overlay" style={{backgroundImage: `url(${bg4})`}}>
+    <div className="testimonials-area section-padding-100 bg-img bg-overlay" style={{backgroundImage: bg4}}>
     <div className="container">
         <div className="row">
             <div className="col-12">
@@ -300,8 +298,8 @@ class App extends Component{
         <div className="row">
             <div className="col-12 col-md-6">
                 <div className="single-testimonial-area mb-100 d-flex wow fadeInUp" data-wow-delay="400ms">
-                    <div class="testimonial-thumb">
-                    <img src={event3} alt="event"/>
+                    <div style={{marginRight: '20px'}}>
+                        <img src={event} alt="event"/>
                     </div>
                     <div className="testimonial-content">
                         <h5>Business Management Series</h5>
@@ -349,131 +347,129 @@ class App extends Component{
                 </div>
     </div>
     </div>
-    <div class="top-popular-courses-area section-padding-100-70">
-        <div class="container">
-            <div class="row">
-                <div class="col-12">
-                    <div class="section-heading text-center mx-auto wow fadeInUp" data-wow-delay="300ms">
-                        <h3>PRICING</h3>
-                        <span>COWORKING PACKAGE</span>
-                    </div>
+    <div className="top-popular-courses-area section-padding-100-70">
+    <div className="container">
+        <div className="row">
+            <div className="col-12">
+                <div className="section-heading text-center mx-auto wow fadeInUp" data-wow-delay="300ms">
+                    <h3>PRICING</h3>
+                    <span>COWORKING PACKAGE</span>
                 </div>
             </div>
-            <div class="row">
+        </div>
+        <div className="row">
 
-                <div class="col-12 col-lg-6">
-                    <div class="single-top-popular-course d-flex align-items-center flex-wrap mb-30 wow fadeInUp"
-                        data-wow-delay="400ms">
-                        <div class="popular-course-content">
-                            <h5>Co-work alpha</h5>
-                            <div> 
-                                <ul>
-                                    <li>Facilities : High Speed WIFI, Hot Desk/Dedicated, Free Flow Tea/Coffee, Printing, Meeting room usage, Locker, Silent Room</li>
-                                    <li>Daily/Pax : <strong>RP 80,000</strong></li>
-                                    <li> Weekly / Monthly : <strong>Rp 400,000 / Rp 1,250,000 </strong> </li>
-                                </ul>
-                            </div>
-                            <button onclick="document.getElementById('id02').style.display='block'"  class="btn academy-btn btn-sm" type="submit">Order now</button>
+            <div className="col-12 col-lg-6">
+                <div className="single-top-popular-course d-flex align-items-center flex-wrap mb-30 wow fadeInUp"
+                    data-wow-delay="400ms">
+                    <div className="popular-course-content">
+                        <h5>Co-work alpha</h5>
+                        <div> 
+                            <ul>
+                                <li style={{marginBottom: '10px'}}>Facilities : High Speed WIFI, Hot Desk/Dedicated, Free Flow Tea/Coffee, Printing, Meeting room usage, Locker, Silent Room</li>
+                                <li style={{marginBottom: '10px'}}>Daily/Pax : <strong>RP 80,000</strong></li>
+                                <li style={{marginBottom: '10px'}}> Weekly / Monthly : <strong>Rp 400,000 / Rp 1,250,000 </strong> </li>
+                            </ul>
                         </div>
-                        <div class="popular-course-thumb bg-img" style={{backgroundImage: `url(${bg3})`}}></div>
+                        <button className="btn academy-btn btn-sm" type="submit">Order now</button>
                     </div>
+                    <img style={{width: '20px'}} className="popular-course-thumb bg-img" src={bg3} alt="bg3"/>
                 </div>
+            </div>
 
-                <div class="col-12 col-lg-6">
-                    <div class="single-top-popular-course d-flex align-items-center flex-wrap mb-30 wow fadeInUp"
-                        data-wow-delay="500ms">
-                        <div class="popular-course-content">
-                            <h5>Cowork Plus</h5>
-                            <div>
-                                <ul>
-                                    <li>Facilities :  High Speed WIFI, Free Flow Tea/Coffee, Dedicated Desk, Silent room, Meeting room usage, Printing, Locker, events and showcase, guest pass, Passport Access, mail service, up to 4 pax</li>
-                                    <li> Monthly : <strong> Rp 2,750,000</strong></li>
-                                </ul>
-                            </div>
-                            <button onclick="document.getElementById('id02').style.display='block'"  class="btn academy-btn btn-sm" type="submit">Order now</button>
+            <div className="col-12 col-lg-6">
+                <div className="single-top-popular-course d-flex align-items-center flex-wrap mb-30 wow fadeInUp"
+                    data-wow-delay="500ms">
+                    <div className="popular-course-content">
+                        <h5>Cowork Plus</h5>
+                        <div>
+                            <ul>
+                                <li style={{marginBottom: '10px'}}>Facilities :  High Speed WIFI, Free Flow Tea/Coffee, Dedicated Desk, Silent room, Meeting room usage, Printing, Locker, events and showcase, guest pass, Passport Access, mail service, up to 4 pax</li>
+                                <li style={{marginBottom: '10px'}}> Monthly : <strong> Rp 2,750,000</strong></li>
+                            </ul>
                         </div>
-                        <div class="popular-course-thumb bg-img" style={{backgroundImage: `url(${bg5})`}}></div>
+                        <button className="btn academy-btn btn-sm" type="submit">Order now</button>
                     </div>
+                    <img className="popular-course-thumb bg-img" src={bg5} alt="bg5"/>
                 </div>
+            </div>
 
-                <div class="col-12 col-lg-6">
-                    <div class="single-top-popular-course d-flex align-items-center flex-wrap mb-30 wow fadeInUp"
-                        data-wow-delay="600ms">
-                        <div class="popular-course-content">
-                            <h5>Startup / Startup Plus</h5>
-                           <div>
-                               <ul>
-                                   <li>Facilities :  High Speed WIFI, Free Flow Tea/Coffee, Dedicated Desk, Silent room, Meeting room usage, Printing, Locker, events and showcase, guest pass, Passport Access, mail and phone handling, up to 3 pax</li>
+            <div className="col-12 col-lg-6">
+                <div className="single-top-popular-course d-flex align-items-center flex-wrap mb-30 wow fadeInUp"
+                    data-wow-delay="600ms">
+                    <div className="popular-course-content">
+                        <h5>Startup / Startup Plus</h5>
+                    <div>
+                        <ul>
+                            <li style={{marginBottom: '3px'}}>Facilities :  High Speed WIFI, Free Flow Tea/Coffee, Dedicated Desk, Silent room, Meeting room usage, Printing, Locker, events and showcase, guest pass, Passport Access, mail and phone handling, up to 3 pax</li>
 
-                                   <li>Monthly start from : <strong>Rp 1,850,000</strong> </li>
-                               </ul>
-                           </div>
-                           <button onclick="document.getElementById('id02').style.display='block'"  class="btn academy-btn btn-sm" type="submit">Order now</button>
-                        </div>
-                        <div class="popular-course-thumb bg-img" style={{backgroundImage: `url(${bg6})`}}></div>
-                        {/* <img src={bg6}/> */}
+                            <li style={{marginBottom: '3px'}}>Monthly start from : <strong>Rp 1,850,000</strong> </li>
+                        </ul>
                     </div>
+                    <button className="btn academy-btn btn-sm" type="submit">Order now</button>
+                    </div>
+                    <img className="popular-course-thumb bg-img" src={bg6} alt="bg4"/>
                 </div>
-                
-                <div class="col-12 col-lg-6">
-                    <div class="single-top-popular-course d-flex align-items-center flex-wrap mb-30 wow fadeInUp"
-                        data-wow-delay="600ms">
-                        <div class="popular-course-content">
-                            <h5>Virtual Office</h5>
-                            <div>
-                                <ul>
-                                    <li>Facilities :  High Speed WIFI, Free Flow Tea/Coffee, Hot Desk, meeting room usage, mail and phone handling, guest pass </li>
-                                    <li> Start from :<strong> Rp 800,000</strong> </li>
-                                </ul>
-                            </div>
-                            <button onclick="document.getElementById('id02').style.display='block'"  class="btn academy-btn btn-sm" type="submit">Order now</button>
+            </div>
+            
+            <div className="col-12 col-lg-6">
+                <div className="single-top-popular-course d-flex align-items-center flex-wrap mb-30 wow fadeInUp"
+                    data-wow-delay="600ms">
+                    <div className="popular-course-content">
+                        <h5>Virtual Office</h5>
+                        <div>
+                            <ul>
+                                <li style={{marginBottom: '10px'}}     >Facilities :  High Speed WIFI, Free Flow Tea/Coffee, Hot Desk, meeting room usage, mail and phone handling, guest pass </li>
+                                <li> Start from :<strong> Rp 800,000</strong> </li>
+                            </ul>
                         </div>
-                        <div class="popular-course-thumb bg-img" style={{backgroundImage: `url(${bg2})`}}></div>
+                        <button className="btn academy-btn btn-sm" type="submit">Order now</button>
                     </div>
+                    <img className="popular-course-thumb bg-img" src={bg} alt="bg2"/>
                 </div>
-                <div class="col-12 col-lg-6">
-                    <div class="single-top-popular-course d-flex align-items-center flex-wrap mb-30 wow fadeInUp"
-                        data-wow-delay="600ms">
-                        <div class="popular-course-content">
-                            <h5>Private Office</h5>
-                            <div>
-                                <ul>
+            </div>
+            <div className="col-12 col-lg-6">
+                <div className="single-top-popular-course d-flex align-items-center flex-wrap mb-30 wow fadeInUp"
+                    data-wow-delay="600ms">
+                    <div className="popular-course-content">
+                        <h5>Private Office</h5>
+                        <div>
+                            <ul>
 
-                                    <li style={{marginBottom: '3px'}}>Facilities :  High Speed WIFI, Free Flow Tea/Coffee, Dedicated Desk, Silent room, Meeting room usage, Printing, Locker, events and showcase, guest pass, Passport Access, mail and phone handling, up to 8 pax</li>
-                                        
-                                    <li>Monthly start from :<strong>Rp 3,000,000</strong> </li>
-                                </ul>
-                            </div>
-                            <button onclick="document.getElementById('id02').style.display='block'"  class="btn academy-btn btn-sm" type="submit">Order now</button>
+                                <li style={{marginBottom: '3px'}}>Facilities :  High Speed WIFI, Free Flow Tea/Coffee, Dedicated Desk, Silent room, Meeting room usage, Printing, Locker, events and showcase, guest pass, Passport Access, mail and phone handling, up to 8 pax</li>
+                                    
+                                <li>Monthly start from :<strong>Rp 3,000,000</strong> </li>
+                            </ul>
                         </div>
-                        <div class="popular-course-thumb bg-img" style={{backgroundImage: `url(${bg1})`}}></div>
+                        <button className="btn academy-btn btn-sm" type="submit">Order now</button>
                     </div>
+                    <img className="popular-course-thumb bg-img" src={bg1} alt="bg"/>
                 </div>
-                <div class="col-12 col-lg-6">
-                    <div class="single-top-popular-course d-flex align-items-center flex-wrap mb-30 wow fadeInUp"
-                        data-wow-delay="700ms">
-                        <div class="popular-course-content">
-                            <h5>Student</h5>
-                            <div> 
-                                <ul>
-                                    <li style={{marginBottom: '10px'}}>Facilities : High Speed WIFI, Free Flow Tea/Coffee, Hot Desk</li>
+            </div>
+            <div className="col-12 col-lg-6">
+                <div className="single-top-popular-course d-flex align-items-center flex-wrap mb-30 wow fadeInUp"
+                    data-wow-delay="700ms">
+                    <div className="popular-course-content">
+                        <h5>Student</h5>
+                        <div> 
+                            <ul>
+                                <li style={{marginBottom: '10px'}}>Facilities : High Speed WIFI, Free Flow Tea/Coffee, Hot Desk</li>
 
-                                        <li style={{marginBottom: '10px'}}>Daily/Pax : <strong> Rp 50,000</strong></li>
-                                        
-                                        <li style={{marginBottom: '10px'}}>Monthly : <strong>Rp 500,000</strong></li>
-                                        
-                                       <strong>Groupies : Rp 30,000/pax, minimal 3 pax!</strong>  
-                                </ul>
-                            </div>
-                            <button onclick="document.getElementById('id02').style.display='block'"  class="btn academy-btn btn-sm" type="submit">Order now</button>
+                                    <li style={{marginBottom: '10px'}}>Daily/Pax : <strong> Rp 50,000</strong></li>
+                                    
+                                    <li style={{marginBottom: '10px'}}>Monthly : <strong>Rp 500,000</strong></li>
+                                    
+                                <strong>Groupies : Rp 30,000/pax, minimal 3 pax!</strong>  
+                            </ul>
                         </div>
-                        <div class="popular-course-thumb bg-img" style={{backgroundImage: `url(${img1})`}}></div>
+                        <button className="btn academy-btn btn-sm" type="submit">Order now</button>
                     </div>
+                    <img className="popular-course-thumb bg-img" src={bg3} alt=""/>
                 </div>
             </div>
         </div>
     </div>
-
+    </div>
     <div className="partner-area section-padding-0-100">
     <div className="container">
         <div className="row">
@@ -508,7 +504,7 @@ class App extends Component{
                 <div className="col-12 col-sm-6 col-lg-3">
                     <div className="footer-widget mb-100">
                         <div className="widget-title">
-                            <a><img src={logo} alt="logo"/></a>
+                            <a  ><img src={logo} alt="logo" style={{textAlign: 'center'}}/></a>
                         </div>
                     </div>
                 </div>
