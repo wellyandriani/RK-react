@@ -83,11 +83,12 @@ class App extends Component{
                                 </a>
                             </div>       
                                 <ul>
-                                    <li><a href="#">Facilities</a> </li>
-                                    <li><a href="#">About Us</a></li>
-                                    <li><a href="#">Event</a></li>
-                                    <li><a href="#">Pricing</a> </li>
-                                    <li><a href="#">Contact</a></li>
+                                    <li><a href="#home">Home</a> </li>
+                                    <li><a href="#facility">Facilities</a> </li>
+                                    <li><a href="#about">About Us</a></li>
+                                    <li><a href="#event">Event</a></li>
+                                    <li><a href="#pricing">Pricing</a> </li>
+                                    <li><a href="#contact">Contact</a></li>
                                 </ul>
                             </div>
                         </div>
@@ -104,7 +105,7 @@ class App extends Component{
         </div>
     </header>
 
-        <div style={{marginTop:'-50px'}}>
+        <div style={{marginTop:'-50px'}} id="home">
          <Carol />
          </div>
                                     
@@ -139,7 +140,7 @@ class App extends Component{
         </div>
     </div>
     </div>
-    <div className="academy-courses-area section-padding-100-0">
+    <div className="academy-courses-area section-padding-100-0" id="facility">
     <div className="container">
             <div className="row">
                     <div className="col-12">
@@ -269,7 +270,7 @@ class App extends Component{
     </div>
     </div>
 
-    <div class="breadcumb-area bg-img">
+    <div class="breadcumb-area bg-img" id="about">
         <div class="bradcumbContent">
             <h2>ABOUT US</h2>
         </div>
@@ -297,7 +298,7 @@ class App extends Component{
 
 
     
-    <div className="testimonials-area section-padding-100 bg-img bg-overlay" style={{backgroundImage: `url(${bg4})`}}>
+    <div className="testimonials-area section-padding-100 bg-img bg-overlay" style={{backgroundImage: `url(${bg4})`}} id="event">
     <div className="container">
         <div className="row">
             <div className="col-12">
@@ -365,7 +366,7 @@ class App extends Component{
                 </div>
     </div>
     </div>
-    <div class="top-popular-courses-area section-padding-100-70">
+    <div class="top-popular-courses-area section-padding-100-70" id="pricing">
         <div class="container">
             <div class="row">
                 <div class="col-12">
@@ -515,7 +516,7 @@ class App extends Component{
         </div>
     </div>
     </div>
-    <div className="footer-area">
+    <div className="footer-area" id="contact">
     <div className="main-footer-area section-padding-100-0">
         <div className="container">
             <div className="row">
