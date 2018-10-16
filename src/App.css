@@ -1,155 +1,3 @@
-.App {
-  text-align: center;
-}
-
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 80px;
-}
-
-.App-header {
-  background-color: #222;
-  height: 150px;
-  padding: 20px;
-  color: white;
-}
-
-.App-title {
-  font-size: 1.5em;
-}
-
-.App-intro {
-  font-size: large;
-}
-
-.h-100 {
-  height: 100%!important;
-}
-.align-items-center {
-  -ms-flex-align: center!important;
-  align-items: center!important;
-}
-
-.owl-carousel,.owl-carousel .owl-item{
-  -webkit-tap-highlight-color:transparent;
-  position:relative
-}
-
-
-.owl-carousel{
-  display:none;
-  width:100%;z-index:1;
-}
-
-.owl-carousel .owl-stage:after{
-  content:".";
-  display:block;
-  clear:both;
-  visibility:hidden;
-  line-height:0;
-  height:0;
-}
-
-.owl-carousel .owl-item img{
-  display:block;
-  width:100%;
-}
-.owl-carousel .owl-dots.disabled,.owl-carousel .owl-nav.disabled{
-  display:none;
-}
-.no-js .owl-carousel,.owl-carousel.owl-loaded{
-  display:block;
-}
-.owl-carousel .owl-dot,.owl-carousel .owl-nav .owl-next,.owl-carousel .owl-nav .owl-prev{
-  cursor:pointer;
-  cursor:hand;
-  -webkit-user-select:none;
-  -khtml-user-select:none;
-  -moz-user-select:none;
-  -ms-user-select:none;
-  user-select:none;
-}
-  .owl-carousel.owl-loading{
-    opacity:0;
-    display:block;
-  }
-  .owl-carousel.owl-hidden{
-    opacity:0;
-  }
-  .owl-carousel.owl-refresh .owl-item{
-    visibility:hidden;
-  }
-  .owl-carousel.owl-drag .owl-item{
-    -webkit-user-select:none;
-    -moz-user-select:none;
-    -ms-user-select:none;
-    user-select:none;
-  }
-  .owl-carousel.owl-grab{
-    cursor:move;
-    cursor:grab;
-  }
-  .owl-carousel.owl-rtl{
-    direction:rtl;
-  }
-  .owl-carousel.owl-rtl .owl-item{
-    float:right;
-  }
-  .owl-carousel .animated{
-    animation-duration:1s;
-    animation-fill-mode:both;
-  }
-  .owl-carousel .owl-animated-in{
-    z-index:0;
-  }
-  .owl-carousel .owl-animated-out{
-    z-index:1;
-  }
-  .owl-carousel .fadeOut{
-    animation-name:fadeOut;
-  }
-  @keyframes fadeOut{0%{opacity:1}100%{opacity:0}}
-  .owl-height{
-    transition:height .5s ease-in-out;
-  }
-  .owl-carousel .owl-item .owl-lazy{
-    opacity:0;
-    transition:opacity .4s ease;
-  }
-  .owl-carousel .owl-item img.owl-lazy{
-    transform-style:preserve-3d;
-  }
-  .owl-carousel .owl-video-wrapper{
-    position:relative;
-    height:100%;
-    background:#000;
-  }   
-  .owl-carousel .owl-video-play-icon:hover{
-      -ms-transform:scale(1.3,1.3);
-      transform:scale(1.3,1.3)
-    }
-    .owl-carousel .owl-video-playing .owl-video-play-icon,.owl-carousel .owl-video-playing .owl-video-tn{
-      display:none;
-    }
-    .owl-carousel .owl-video-tn{
-      opacity:0;
-      height:100%;
-      background-position:center center;
-      background-repeat:no-repeat;
-      background-size:contain;
-      transition:opacity .4s ease;
-    }
-    .owl-carousel .owl-video-frame{
-      position:relative;
-      z-index:1;
-      height:100%;
-      width:100%;
-    }
-
-@keyframes App-logo-spin {
-  from { transform: rotate(0deg); }
-  to { transform: rotate(360deg); }
-}
 
 .header-area .top-header {
   width: 100%;
@@ -415,8 +263,8 @@ img {
 /* Preloader */
 #preloader {
   background: #f2ac21;
-  background: -webkit-linear-gradient(to right, #f2ac21, #f2ac21);
-  background: linear-gradient(to right, #f2ac21, #f2ac21);
+  background: -webkit-linear-gradient(to right, #f2ac21, #e2b253);
+  background: linear-gradient(to right, #f2ac21, #e2b253);
   width: 100%;
   height: 100%;
   position: fixed;
@@ -503,8 +351,8 @@ img {
 /* ScrollUp */
 #scrollUp {
   background: #f2ac21;
-  background: -webkit-linear-gradient(to right, #f2ac21, #f2ac21);
-  background: linear-gradient(to right, #f2ac21, #f2ac21);
+  background: -webkit-linear-gradient(to right, #f2ac21, #e2b253);
+  background: linear-gradient(to right, #f2ac21, #e2b253);
   border-radius: 0;
   bottom: 60px;
   box-shadow: 0 2px 6px 0 rgba(0, 0, 0, 0.3);
@@ -538,8 +386,8 @@ img {
   -webkit-transition: all 500ms;
   transition: all 500ms;
   background: #f2ac21;
-  background-image: -webkit-linear-gradient(left, #f2ac21 0%, #f2ac21 51%, #f2ac21 100%);
-  background-image: linear-gradient(to right, #f2ac21 0%, #f2ac21 51%, #f2ac21 100%);
+  background-image: -webkit-linear-gradient(left, #f2ac21 0%, #e2b253 51%, #f2ac21 100%);
+  background-image: linear-gradient(to right, #f2ac21 0%, #e2b253 51%, #f2ac21 100%);
   font-weight: 600; }
   .academy-btn.btn-sm {
     min-width: 110px;
@@ -551,8 +399,8 @@ img {
     font-weight: 600;
     color: #ffffff;
     background: #f2ac21;
-    background: -webkit-linear-gradient(to right, #f2ac21, #f2ac21);
-    background: linear-gradient(to right, #f2ac21, #f2ac21); }
+    background: -webkit-linear-gradient(to right, #f2ac21, #e2b253);
+    background: linear-gradient(to right, #f2ac21, #e2b253); }
   .academy-btn.btn-2 {
     background: #141414; }
     .academy-btn.btn-2:hover, .academy-btn.btn-2:focus {
@@ -740,8 +588,8 @@ img {
   .hero-slides .owl-prev,
   .hero-slides .owl-next {
     background: #f2ac21;
-    background: -webkit-linear-gradient(to right, #f2ac21, #f2ac21);
-    background: linear-gradient(to right, #f2ac21, #f2ac21);
+    background: -webkit-linear-gradient(to right, #f2ac21,#e2b253);
+    background: linear-gradient(to right, #f2ac21, #e2b253);
     width: 56px;
     height: 56px;
     line-height: 56px;
@@ -789,8 +637,8 @@ img {
     position: relative;
     z-index: 50;
     background: #f2ac21;
-    background: -webkit-linear-gradient(to right, #f2ac21, #f2ac21);
-    background: linear-gradient(to right, #f2ac21, #f2ac21);
+    background: -webkit-linear-gradient(to right, #f2ac21, #e2b253);
+    background: linear-gradient(to right, #f2ac21, #e2b253);
     padding: 40px 15px;
     -webkit-transform: translateY(-50%);
     transform: translateY(-50%); }
@@ -1011,8 +859,8 @@ img {
   position: relative;
   z-index: 1;
   background: #f2ac21;
-  background: -webkit-linear-gradient(to right, #f2ac21, #f2ac21);
-  background: linear-gradient(to right, #f2ac21, #f2ac21);
+  background: -webkit-linear-gradient(to right, #f2ac21, #e2b253);
+  background: linear-gradient(to right, #f2ac21, #e2b253);
   padding: 70px 0; }
   .call-to-action-area .cta-content h3 {
     font-size: 30px;
@@ -1111,8 +959,8 @@ img {
     width: 500px;
     height: 110px;
     background: #f2ac21;
-    background: -webkit-linear-gradient(to right, #f2ac21, #f2ac21);
-    background: linear-gradient(to right, #f2ac21, #f2ac21);
+    background: -webkit-linear-gradient(to right, #f2ac21, #e2b253);
+    background: linear-gradient(to right, #f2ac21, #e2b253);
     position: absolute;
     bottom: -60px;
     -webkit-transform: translateX(-50%);
@@ -1138,8 +986,8 @@ img {
   .about-slides .owl-prev,
   .about-slides .owl-next {
     background: #f2ac21;
-    background: -webkit-linear-gradient(to right, #f2ac21, #f2ac21);
-    background: linear-gradient(to right, #f2ac21, #f2ac21);
+    background: -webkit-linear-gradient(to right, #f2ac21, #e2b253);
+    background: linear-gradient(to right, #f2ac21, #e2b253);
     width: 56px;
     height: 56px;
     line-height: 56px;
@@ -1409,8 +1257,8 @@ img {
         filter: alpha(opacity=0); }
     .single-accordion h6 a.collapsed {
       background: #f2ac21;
-      background: -webkit-linear-gradient(to right, #f2ac21, #f2ac21);
-      background: linear-gradient(to right, #f2ac21, #f2ac21);
+      background: -webkit-linear-gradient(to right, #f2ac21, #e2b253);
+      background: linear-gradient(to right, #f2ac21, #e2b253);
       color: #ffffff; }
       .single-accordion h6 a.collapsed span.accor-close {
         opacity: 0;
@@ -1436,8 +1284,8 @@ img {
     margin-bottom: 50px; }
     .academy-tabs-content .nav-tabs .nav-link {
       background: #f2ac21;
-      background: -webkit-linear-gradient(to right, #f2ac21, #f2ac21);
-      background: linear-gradient(to right, #f2ac21, #f2ac21);
+      background: -webkit-linear-gradient(to right, #f2ac21, #e2b253);
+      background: linear-gradient(to right, #f2ac21, #e2b253);
       padding: 0 20px;
       height: 50px;
       line-height: 50px;

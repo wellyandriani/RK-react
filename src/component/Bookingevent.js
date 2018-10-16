@@ -1,39 +1,94 @@
 import React from 'react';
-import { Button, Modal, ModalHeader, ModalBody, ModalFooter } from 'reactstrap';
-
-class Event extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      modal: false
-    };
-
-    this.toggle = this.toggle.bind(this);
-  }
-
-  toggle() {
-    this.setState({
-      modal: !this.state.modal
-    });
-  }
-
-  render() {
-    return (
-      <div>
-        <Button color="danger" onClick={this.toggle}>{this.props.buttonLabel}</Button>
-        <Modal isOpen={this.state.modal} toggle={this.toggle} className={this.props.className}>
-          <ModalHeader toggle={this.toggle}>Modal title</ModalHeader>
-          <ModalBody>
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-          </ModalBody>
-          <ModalFooter>
-            <Button color="primary" onClick={this.toggle}>Do Something</Button>{' '}
-            <Button color="secondary" onClick={this.toggle}>Cancel</Button>
-          </ModalFooter>
-        </Modal>
-      </div>
-    );
-  }
+import axios from 'axios';
+import {Form, FormGroup, Input, Label, Button, Col ,Modal, ModalBody, ModalHeader} from 'reactstrap';
+ class Create extends React.Component {
+    constructor(props){
+        super(props);
+        this.state = {
+            name: '',
+            email:'',
+            event:'',
+            phone:'',
+            date:'',
+            modal: props.modal
+        };
+         this.handleChange = this.handleChange.bind(this);
+        this.handleChange = this.handleChange.bind(this);
+        this.handleClosed = this.handleClosed.bind(this);
+        this.close = this.close.bind(this);
+    }
+     handleChange(event){
+        ;
+        this.setState({[event.target.username]: event.target.value});
+    }
+    handleSubmit(event){
+        event.preventDefault();
+        axios.post('', this.state)
+            .then(res => {
+                console.log(res);
+                console.log(res.data);
+            });
+    }
+    render(){
+        return(
+            <div >
+               
+                <Modal isOpen={this.state.modal} onClosed={this.handleClosed}>
+                    <ModalHeader>Booking Event</ModalHeader>
+                    <ModalBody>
+                        <Form onSubmit={this.handleSubmit}>
+                            <FormGroup row>
+                                <Label for="username" sm={2}>Event
+                                  <select value={this.state.value} onChange={this.handleChange}>
+                                    <option value="Business Management Series">Business Management Series</option>
+                                    <option value="Social Series">Social Series</option>
+                                    <option value="Tech Series">Tech Series</option>
+                                  </select>
+                                </Label>
+                            </FormGroup>
+                            <FormGroup row>
+                                <Label for="name" sm={2}>Nama</Label>
+                                <Col sm={10}>
+                                    <Input type="text" name="name" id="name" onChange={this.handleChange }/>
+                                </Col>
+                            </FormGroup>
+                            <FormGroup row>
+                                <Label for="email" sm={2}>Email</Label>
+                                <Col sm={10}>
+                                    <Input type="email" name="email" id="email" onChange={this.handleChange }/>
+                                </Col>
+                            </FormGroup>
+                            <FormGroup row>
+                                <Label for="phone" sm={2}>Phone</Label>
+                                <Col sm={10}>
+                                    <Input type="number" name="phone" id="phone" onChange={this.handleChange }/>
+                                </Col>
+                            </FormGroup>
+                            <FormGroup row>
+                                <Label for="password" sm={2}>Date</Label>
+                                <Col sm={10}>
+                                    <Input type="date" name="date" id="date" onChange={this.handleChange }/>
+                                </Col>
+                            </FormGroup>
+                            <FormGroup row>
+                                <Col sm={{size: 10, offset: 2 }}>
+                                    <Button style={{width: '20%'}}>Booking</Button>
+                                    <Button style={{width: '20%', marginLeft:'20px'}} type="button" onClick={this.close}>Batal</Button>
+                                </Col>
+                            </FormGroup>
+                        </Form>
+                    </ModalBody>
+                </Modal>
+            </div>
+        );
+    }
+    handleClosed() {
+        this.props.closeModal();
+    }
+     close() {
+        this.setState({
+            modal: false
+        });
+    }
 }
-
-export default Event;
+ export default Create; 

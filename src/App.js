@@ -2,16 +2,24 @@ import React, { Component } from 'react';
 import Carol from './component/Carausel';
 import { Button } from 'reactstrap';
 import Order from './component/BookingRoom'
+import Login from './component/Login'
+import Event from './component/Bookingevent'
 import './App.css'
 import './css/animate.css'
 import './css/bootstrap.min.css'
 import './css/magnific-popup.css'
 import './css/classy-nav.min.css'
 
-import bg from './img/bg-img/bg.jpeg'
+import contact01 from './img/core-img/contact+icon-01.png'
+import contact02 from './img/core-img/contact+icon-02.png'
+import contact05 from './img/core-img/contact+icon-05.png'
+import tenant01 from './img/clients-img/tenant01.jpg'
+import tenant02 from './img/clients-img/tenant02.jpeg'
+import tenant03 from './img/clients-img/MB.png'
+import tenant04 from './img/clients-img/sinergy.png'
 import event from './img/bg-img/event.jpeg'
 import event1 from './img/bg-img/event1.jpeg'
-import event3 from './img/bg-img/event3.jpeg'
+import event2 from './img/bg-img/event3.jpeg'
 import img1 from './img/bg-img/1.jpg'
 import bg1 from './img/bg-img/bg-1.jpeg'
 import bg2 from './img/bg-img/bg-2.jpeg'
@@ -44,6 +52,8 @@ class App extends Component{
         };
         //debugger // eslint-disable-line 
         this.showCreate = this.showCreate.bind(this);
+        this.showLogin = this.showLogin.bind(this);
+        this.showEvent = this.showEvent.bind(this);
         this.closeModal = this.closeModal.bind(this);
     }
   render(){
@@ -52,49 +62,6 @@ class App extends Component{
 
 
     <header className="header-area">
-        <div className="top-header">
-            <div className="container h-100">
-                <div className="row h-100">
-                    <div className="col-12 h-100">
-                        <div className="header-content h-100 d-flex align-items-center justify-content-between">
-                            <div className="academy-logo">
-                                <img className="logo" src={logo} alt="logo"/>
-                            </div>
-                            
-                            <div className="login-content">
-                                <button  style={{width:'auto'}} >Member/Login</button>
-                                <div id="id01" className="modal">
-
-                                    <form className="modal-content animate" action="/action_page.php">
-                                        <div className="imgcontainer">
-                                        <span  className="close" title="Close Modal">&times;</span>
-                                        </div>
-                                    
-                                        <div className="containerlogin">
-                                        <label ><b>Email</b></label>
-                                        <input type="email" placeholder="Enter Email" name="uname" required />
-                                    
-                                        <label ><b>Password</b></label>
-                                        <input type="password" placeholder="Enter Password" name="psw" required />
-                                            
-                                        <button type="submit">Login</button>
-                                        <label>
-                                            <input type="checkbox"  name="remember"/> Remember me
-                                        </label>
-                                        </div>
-                                    
-                                        <div className="containerlogin" style={{backgroundcolor:'#f1f1f1'}}>
-                                        <button type="button"  className="cancelbtn">Cancel</button>
-                                        <span className="psw">Forgot <a>password?</a></span>
-                                        </div>
-                                    </form>
-                                    </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
     <div id="sticky-wrapper" className="sticky-wrapper is-sticky" style={{height:'85px'}}>
         <div className="academy-main-menu" style={{width: '1351px', position:"fixed", top:'0px', index: 'inherit'}}>
             <div className="classy-nav-container breakpoint-off light left">
@@ -110,11 +77,16 @@ class App extends Component{
                             </div>
 
                             <div className="classynav">
+                            <div className="widget-title">
+                                <a style={{marginLeft:'-85px'}}>
+                                    <img style={{width:'55px', height:'55px'}} src={logo} alt="logo"/>
+                                </a>
+                            </div>       
                                 <ul>
-                                    <li><a href="#">Pricing</a> </li>
                                     <li><a href="#">Facilities</a> </li>
                                     <li><a href="#">About Us</a></li>
                                     <li><a href="#">Event</a></li>
+                                    <li><a href="#">Pricing</a> </li>
                                     <li><a href="#">Contact</a></li>
                                 </ul>
                             </div>
@@ -122,7 +94,7 @@ class App extends Component{
 
                         <div className="calling-info">
                             <div className="call-center">
-                                <a href="#"> <span>Login/Member</span></a>
+                                <button className="btn btn-sm" style={{border:'0', backgroundColor:'#f2ac21'}} onClick={this.showLogin} >Login/Member</button>
                             </div>
                         </div>
                     </nav>
@@ -296,6 +268,35 @@ class App extends Component{
         </div>
     </div>
     </div>
+
+    <div class="breadcumb-area bg-img">
+        <div class="bradcumbContent">
+            <h2>ABOUT US</h2>
+        </div>
+    </div>
+    <section class="about-us-area mt-50 section-padding-100">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <div class="section-heading text-center mx-auto wow fadeInUp" data-wow-delay="300ms">
+                        <span>The Best</span>
+                        <h3>We are the Coworking Space</h3>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-12 col-md-6 wow fadeInUp" data-wow-delay="400ms">
+                    <p>Konsep kantor bersama kini mulai menjadi trend di Batam, Kepulauan Riau. Konsep itu pun digagas Ruang Kreasi dengan membuat bisnis co-working space atau kantor bersama. Ruang Kreasi menyediakan tempat bagi siapapun untuk menyewa, baik personal maupun perusahaan. Sewanya bisa  bulanan hingga per hari bahkan per jam, selain itu juga ada tarif untuk pelajar. Karna Untuk penyewaan gedung sendiri tentu harganya jauh lebih mahal. Harga mulai Rp50 ribu per hari, sedangkan untuk umum Rp80 ribu per hari di dalamnya sudah termasuk pemakaian semua fasilitas sepuasnya</p>
+                </div>
+                <div class="col-12 col-md-6 wow fadeInUp" data-wow-delay="500ms">
+                    <p>Tentu saja Ruang Kreasi cocok bagi para pelaku start up digital, freelancers atau usaha kecil dan menengah. Selain itu, keuntungan menyewa co-working space di Ruang Kreasi, selain praktis, bisa bergabung bersama orang-orang profesional dengan latar belakang berbeda. Ruang Kreasi juga terkesan cozy atau nyaman, ruangan yang disediakan didesain sedemikian rupa, bersih, dan membuat Anda betah berada di kantor berlama-lama. Ruang Kreasi juga menyediakan beberapa tarif umum hingga pelajar. </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    
     <div className="testimonials-area section-padding-100 bg-img bg-overlay" style={{backgroundImage: `url(${bg4})`}}>
     <div className="container">
         <div className="row">
@@ -306,40 +307,61 @@ class App extends Component{
                 </div>
             </div>
         </div>
-        <div className="row">
-        
+
+            <div className="row">
             <div className="col-12 col-md-6">
+                    <div style={{width:'400px', height:'auto'}}>
+                    <img src={event} alt="event"/>
+                    </div>
+            </div>
+            <div className="col align-self-center" style={{marginTop:'60px'}}>
                 <div className="single-testimonial-area mb-100 d-flex wow fadeInUp" data-wow-delay="400ms">
-                
                     <div className="testimonial-content">
-                        <h5>Business Management Series</h5>
+                    <h5>Business Management Series</h5>
                         <p>From digital marketing to modern organization management, our space provide you with 
                             insights and strategy for your business from top speakers from practitioners.</p>
                     </div>
                 </div>
             </div>
-            <div className="col-12 col-md-6">
-                <div className="single-testimonial-area mb-100 d-flex wow fadeInUp" data-wow-delay="500ms">
-                   
-                    <div className="testimonial-content">
-                        <h5>Social Series</h5>
-                        <p>Cooking, brunch or healthy lifestyle seminar to balance your daily life.</p>
+            
+            </div>
+
+              <div className="row" style={{marginTop:'50px'}}>
+                <div className="col-12 col-md-6">
+                    <div style={{width:'400px', height:'auto'}}>
+                        <img src={event1} alt="event1"/>
                     </div>
                 </div>
+                <div className="col align-self-center" style={{marginTop:'60px'}}>
+                    <div className="single-testimonial-area mb-100 d-flex wow fadeInUp" data-wow-delay="400ms">
+                            <div className="testimonial-content">
+                                <h5>Social Series</h5>
+                                <p>Cooking, brunch or healthy lifestyle seminar to balance your daily life.</p>
+                            </div>
+                    </div>  
+                </div>
+            
             </div>
-           
+
+
+              <div className="row" style={{marginTop:'50px'}}>
             <div className="col-12 col-md-6">
-                <div className="single-testimonial-area mb-100 d-flex wow fadeInUp" data-wow-delay="600ms">
-                    
+                    <div style={{width:'400px', height:'auto'}}>
+                    <img src={event2} alt="event2"/>
+                    </div>
+            </div>
+            <div className="col align-self-center" style={{marginTop:'60px'}}>
+                <div className="single-testimonial-area mb-100 d-flex wow fadeInUp" data-wow-delay="400ms">
                     <div className="testimonial-content">
-                        <h5>Tech Series</h5>
+                    <h5>Tech Series</h5>
                         <p>Product Review, Startups tips or coding workshops, we got it covered for you.</p>
                     </div>
                 </div>
-        </div>
+            </div>
+
         </div>
                 <div className="section-heading text-center mx-auto white wow fadeInUp" data-wow-delay="300ms">
-                    <button className="btn academy-btn btn-sm" type="submit" style={{width:'25%'}}>Booking Event</button>
+                    <Button style={{border:'0',width:'25%' ,backgroundColor:'#f2ac21'}} onClick={this.showEvent} className="btn academy-btn btn-sm" type="submit">Booking Event</Button>
                 </div>
     </div>
     </div>
@@ -348,7 +370,7 @@ class App extends Component{
             <div class="row">
                 <div class="col-12">
                     <div class="section-heading text-center mx-auto wow fadeInUp" data-wow-delay="300ms">
-                        <h3>PRICING</h3>
+                        <h3>PLANS & PRICING</h3>
                         <span>COWORKING PACKAGE</span>
                     </div>
                 </div>
@@ -367,7 +389,7 @@ class App extends Component{
                                     <li> Weekly / Monthly : <strong>Rp 400,000 / Rp 1,250,000 </strong> </li>
                                 </ul>
                             </div>
-                            <Button onClick={this.showCreate} className="btn academy-btn btn-sm">Order now</Button>
+                            <Button style={{border:'0',backgroundColor:'#f2ac21'}} onClick={this.showCreate} className="academy-btn btn-sm ">Order now</Button>
                         </div>
                         <div class="popular-course-thumb bg-img" style={{backgroundImage: `url(${bg3})`}}></div>
                     </div>
@@ -384,7 +406,7 @@ class App extends Component{
                                     <li> Monthly : <strong> Rp 2,750,000</strong></li>
                                 </ul>
                             </div>
-                            <Button onClick={this.showCreate} className="btn academy-btn btn-sm">Order now</Button>
+                            <Button style={{border:'0', backgroundColor:'#f2ac21'}} onClick={this.showCreate} className="btn academy-btn btn-sm">Order now</Button>
                         </div>
                         <div class="popular-course-thumb bg-img" style={{backgroundImage: `url(${bg5})`}}></div>
                     </div>
@@ -402,7 +424,7 @@ class App extends Component{
                                    <li>Monthly start from : <strong>Rp 1,850,000</strong> </li>
                                </ul>
                            </div>
-                           <Button onClick={this.showCreate} className="btn academy-btn btn-sm">Order now</Button>
+                           <Button style={{border:'0', backgroundColor:'#f2ac21'}} onClick={this.showCreate} className="btn academy-btn btn-sm">Order now</Button>
                         </div>
                         <div class="popular-course-thumb bg-img" style={{backgroundImage: `url(${bg6})`}}></div>
                     </div>
@@ -419,7 +441,7 @@ class App extends Component{
                                     <li> Start from :<strong> Rp 800,000</strong> </li>
                                 </ul>
                             </div>
-                            <Button onClick={this.showCreate} className="btn academy-btn btn-sm">Order now</Button>
+                            <Button style={{border:'0', backgroundColor:'#f2ac21'}} onClick={this.showCreate} className="btn academy-btn btn-sm">Order now</Button>
                         </div>
                         <div class="popular-course-thumb bg-img" style={{backgroundImage: `url(${bg2})`}}></div>
                     </div>
@@ -437,7 +459,7 @@ class App extends Component{
                                     <li>Monthly start from :<strong>Rp 3,000,000</strong> </li>
                                 </ul>
                             </div>
-                            <Button onClick={this.showCreate} className="btn academy-btn btn-sm">Order now</Button>
+                            <Button style={{border:'0', backgroundColor:'#f2ac21'}} onClick={this.showCreate} className="btn academy-btn btn-sm">Order now</Button>
                         </div>
                         <div class="popular-course-thumb bg-img" style={{backgroundImage: `url(${bg1})`}}></div>
                     </div>
@@ -458,7 +480,7 @@ class App extends Component{
                                        <strong>Groupies : Rp 30,000/pax, minimal 3 pax!</strong>  
                                 </ul>
                             </div>
-                            <Button onClick={this.showCreate} className="btn academy-btn btn-sm">Order now</Button>
+                            <Button style={{border:'0', backgroundColor:'#f2ac21'}} onClick={this.showCreate} className="btn academy-btn btn-sm">Order now</Button>
                         </div>
                         <div class="popular-course-thumb bg-img" style={{backgroundImage: `url(${img1})`}}></div>
                     </div>
@@ -472,11 +494,10 @@ class App extends Component{
         <div className="row">
             <div className="col-12">
                 <div className="partners-logo d-flex align-items-center justify-content-between flex-wrap">
-                    <a  ><img src="img/clients-img/partner-1.png" alt=""/></a>
-                    <a  ><img src="img/clients-img/partner-2.png" alt=""/></a>
-                    <a  ><img src="img/clients-img/partner-3.png" alt=""/></a>
-                    <a  ><img src="img/clients-img/partner-4.png" alt=""/></a>
-                    <a  ><img src="img/clients-img/partner-5.png" alt=""/></a>
+                    <a ><img src={tenant01} alt="tenant1"/></a>
+                    <a ><img src={tenant02} alt="tenant2"/></a>
+                    <a ><img src={tenant03} alt="tenant3"/></a>
+                    <a ><img src={tenant04} alt="tenant4"/></a>
                 </div>
             </div>
         </div>
@@ -501,7 +522,7 @@ class App extends Component{
                 <div className="col-12 col-sm-6 col-lg-3">
                     <div className="footer-widget mb-100">
                         <div className="widget-title">
-                            <a><img src={logo} alt="logo"/></a>
+                            <a ><img style={{marginTop:'18px'}} src={logo} alt="logo"/></a>
                         </div>
                     </div>
                 </div>
@@ -513,20 +534,13 @@ class App extends Component{
                         </div>
                         <div className="single-contact d-flex mb-30">
                             <i className="icon-placeholder"></i>
-                            <p>Komp. Nusantara Golden (Behind Ikan Bakar Cianjur)
+                            <p>Komp. Nusantara Golden (Behind Ikan Bakar Cianjur),
                                 Blok B-10, Batam Centre
                                 Batam, 29426</p>
                         </div>
                         <div className="single-contact d-flex mb-30">
                             <i className="icon-telephone-1"></i>
                             <p>Mobile / Whatsapp : 0811 7011 226</p>
-                        </div>
-                        <div className="single-contact d-flex">
-                            <i className="icon-contract"></i>
-                            <p>Instagram : @ruangkreasi.co</p>
-                        </div>
-                        <div>
-                            https://www.facebook.com/ruangkreasi.co/
                         </div>
                     </div>
                 </div>
@@ -538,16 +552,20 @@ class App extends Component{
             <div className="row">
                 <div className="col-12">
                     <p>
-                        Copyright &copy;<script>
-                            document.write(new Date().getFullYear());
-                        </script> Term | Privacy Policy Ruang Kreasi. All Rights Reserved.
+                        <a style={{marginLeft:'200px'}}>Copyright &copy;Term | Privacy Policy Ruang Kreasi. All Rights Reserved.</a>
+                        <a href="https://www.instagram.com/ruangkreasi.co/" target="_blank" ><img src={contact01} alt="contact01" style={{width:'50px', height:'50px', marginLeft:'150px'}}/></a>
+                        <a href="https://www.facebook.com/ruangkreasi.co/" target="_blank"><img src={contact05} alt="contact05" style={{width:'50px', height:'50px'}}/></a>
+                        <a href="https://www.facebook.com/ruangkreasi.co/" target="_blank"><img src={contact02} alt="contact02" style={{width:'50px', height:'50px'}}/></a>
                     </p>
+                    
                 </div>
             </div>
         </div>
     </div>
     </div>
     { (this.state.showModule == 'create') && <Order modal={this.state.modal} closeModal={this.closeModal}/> }
+    { (this.state.showModule == 'login') && <Login modal={this.state.modal} closeModal={this.closeModal}/> }
+    { (this.state.showModule == 'event') && <Event modal={this.state.modal} closeModal={this.closeModal}/> }
     </div>
         )
     }
@@ -556,6 +574,18 @@ class App extends Component{
             showModule: 'create',
             modal: true
         });
+    }
+    showLogin(){
+        this.setState({
+            showModule: 'login',
+            modal: true
+        })
+    }
+    showEvent(){
+        this.setState({
+            showModule: 'event',
+            modal: true
+        })
     }
      closeModal() {
         this.setState({
